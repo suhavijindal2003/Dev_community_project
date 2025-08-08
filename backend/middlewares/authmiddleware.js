@@ -8,7 +8,7 @@ const authMiddleware = async (req , res, next) =>{
 
     const token = authorization.split(" ")[1];
 
-    const userData = await jwt.verify(token, process.env.JWT_SECRET);
+    const userData = await jwt.verify(token, process.env.SECRET_KEY);
     console.log(userData)
     
 
